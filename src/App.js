@@ -1,8 +1,9 @@
 import 'react-native-gesture-handler';
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
+import StackNavigation from './Navigation/StackNavigation';
 
 export default class App extends Component {
   componentDidMount() {
@@ -12,9 +13,9 @@ export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <View>
-          <Text>Catering</Text>
-        </View>
+        <SafeAreaView style={{flex: 1}}>
+          <StackNavigation />
+        </SafeAreaView>
       </NavigationContainer>
     );
   }
