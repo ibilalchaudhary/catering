@@ -10,8 +10,8 @@ export default function Logo({light}) {
           : require('../Assets/logo.png')
       }
       style={{
-        width: 100,
-        height: 100,
+        width: 175,
+        height: 80,
         marginVertical: 50,
         alignSelf: 'center',
       }}
