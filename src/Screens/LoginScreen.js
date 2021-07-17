@@ -25,7 +25,7 @@ export default class LoginScreen extends Component {
           style={{height: Height, flex: 1}}>
           <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
             <Logo light={true} />
-            <Heading lignt={true} />
+            <Heading varinat="white" placeholder="Welcome Back!" />
             <InputBox placeholder="Email" variant="primary" />
             <InputBox
               placeholder="Password"

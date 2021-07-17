@@ -25,7 +25,7 @@ export default class RegisterScreen extends Component {
         style={{height: Height, flex: 1}}>
         <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
           <Logo light={false} />
-          <Heading lignt={false} />
+          <Heading varinat="primary" placeholder="Welcome Back!" />
           <InputBox placeholder="User Name" variant="light" />
           <InputBox placeholder="Email" variant="light" />
           <InputBox
