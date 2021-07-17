@@ -47,7 +47,13 @@ export default class LoginScreen extends Component {
                 </Text>
               </TouchableOpacity>
             </View>
-            <Button placeholder="Login" veriant="primary" onPress={() => {}} />
+            <Button
+              placeholder="Login"
+              veriant="primary"
+              onPress={() => {
+                navigation.navigate('Dashboard');
+              }}
+            />
             <View
               style={{
                 display: 'flex',

@@ -21,7 +21,7 @@ export default class RegisterScreen extends Component {
     const navigation = this.props.navigation;
     return (
       <ImageBackground
-        source={require('../Assets/login_background.png')}
+        source={require('../Assets/register_background.png')}
         style={{height: Height, flex: 1}}>
         <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
           <Logo light={false} />
@@ -61,7 +61,13 @@ export default class RegisterScreen extends Component {
               <Text style={styles.link}>privacy policy</Text>
             </TouchableOpacity>
           </View>
-          <Button placeholder="Sign Up" veriant="primary" onPress={() => {}} />
+          <Button
+            placeholder="Sign Up"
+            veriant="primary"
+            onPress={() => {
+              navigation.navigate('Dashboard');
+            }}
+          />
           <View
             style={{
               display: 'flex',
