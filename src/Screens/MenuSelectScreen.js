@@ -7,14 +7,8 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-import Button from '../Components/Button';
-import Checkbox from '../Components/Checkbox';
-import Heading from '../Components/Heading';
-import InputBox from '../Components/InputBox';
-import DatePickerBox from '../Components/DatePickerBox';
-import TimePickerBox from '../Components/TimePickerBox';
 import Logo from '../Components/Logo';
-import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {THIRD, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
 import MenuBtn from '../Components/MenuBtn';

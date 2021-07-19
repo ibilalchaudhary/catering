@@ -12,7 +12,6 @@ import Heading from '../Components/Heading';
 import {TEXT_COLOR, THIRD} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 import Button from '../Components/Button';
-import Features from '../Components/Features';
 import MenuCard from '../Components/MenuCard';
 
 export default class DashboardScreen extends Component {
@@ -32,7 +31,10 @@ export default class DashboardScreen extends Component {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                 }}>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => {
+                    navigation.navigate('EditProfile');
+                  }}>
                   <Image
                     source={require('../Assets/userPic.png')}
                     style={{width: 50, height: 50}}

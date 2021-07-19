@@ -12,6 +12,7 @@ import CustomMenuScreen from '../Screens/CustomMenuScreen';
 import CustomMenuCreationScreen from '../Screens/CustomMenuCreationScreen';
 import ItemDetailsScreen from '../Screens/ItemDetailsScreen';
 import CartScreen from '../Screens/CartScreen';
+import EditProfileScreen from '../Screens/EditProfileScreen';
 
 const Stack = createStackNavigator();
 
@@ -44,6 +45,7 @@ export default function StackNavigation() {
       />
       <Stack.Screen name="ItemDetails" component={ItemDetailsScreen} />
       <Stack.Screen name="Cart" component={CartScreen} />
+      <Stack.Screen name="EditProfile" component={EditProfileScreen} />
     </Stack.Navigator>
   );
 }
