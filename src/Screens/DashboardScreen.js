@@ -610,6 +610,7 @@ function MenuCard({chairs, lights, ballons, table, music}) {
 
 export default class DashboardScreen extends Component {
   render() {
+    const navigation = this.props.navigation;
     const isOrdered = true;
     return (
       <>
@@ -685,7 +686,9 @@ export default class DashboardScreen extends Component {
               <Button
                 veriant="primary"
                 placeholder="Place Order"
-                onPress={() => {}}
+                onPress={() => {
+                  navigation.navigate('NewOrder');
+                }}
               />
             </View>
           </View>
@@ -727,6 +730,9 @@ export default class DashboardScreen extends Component {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                  }}
+                  onPress={() => {
+                    navigation.navigate('NewOrder');
                   }}>
                   <Svg
                     xmlns="http://www.w3.org/2000/svg"
