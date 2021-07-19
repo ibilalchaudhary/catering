@@ -1,20 +1,13 @@
 import React, {Component, useState} from 'react';
 import {
-  Image,
   ImageBackground,
-  Text,
   ScrollView,
   View,
   TouchableOpacity,
 } from 'react-native';
 import Button from '../Components/Button';
-import Checkbox from '../Components/Checkbox';
-import Heading from '../Components/Heading';
-import InputBox from '../Components/InputBox';
-import DatePickerBox from '../Components/DatePickerBox';
-import TimePickerBox from '../Components/TimePickerBox';
 import Logo from '../Components/Logo';
-import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {FORTH, PRIMARY, THIRD, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
 

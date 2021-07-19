@@ -8,23 +8,6 @@ import Header from '../Components/Header';
 import MenuItem from '../Components/MenuItem';
 import ItemCarousel from '../Components/ItemCarousel';
 
-function CatagoryRow({catagoryName, navigation}) {
-  return (
-    <View style={{width: '100%', marginBottom: 10}}>
-      <Text
-        style={{
-          marginBottom: 10,
-          fontSize: 18,
-          fontWeight: 'bold',
-          color: PRIMARY,
-        }}>
-        {catagoryName}
-      </Text>
-      <ItemCarousel navigation={navigation} />
-    </View>
-  );
-}
-
 export default class CustomMenuCreationScreen extends Component {
   render() {
     const navigation = this.props.navigation;
