@@ -31,9 +31,10 @@ function EditProfileHeadings({svg, text}) {
   );
 }
 
-function EditProfileHeadingsTouchAble({text, svg, lastItem}) {
+function EditProfileHeadingsTouchAble({text, svg, lastItem, onPress}) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         display: 'flex',
         flexDirection: 'row',
@@ -261,11 +262,14 @@ export default class CustomMenuScreen extends Component {
           <EditProfileHeadingsTouchAble
             text={'Change Password'}
             lastItem={true}
+            onPress={() => {
+              navigation.navigate('ChangePassword');
+            }}
             svg={
               <Svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={21.487}
-                height={28.951}
+                height={21.951}
                 fill="#000000"
                 viewBox="0 0 21.487 28.951">
                 <Path

@@ -68,7 +68,7 @@ export default function InputBox({placeholder, variant, secureTextEntry}) {
       <TouchableOpacity
         style={{
           flex: 1,
-          height: 45,
+          maxHeight: 45,
           borderRadius: 5,
           backgroundColor: '#f6f6f6',
           paddingHorizontal: 15,
