@@ -17,25 +17,7 @@ import Logo from '../Components/Logo';
 import {PRIMARY, TEXT_COLOR, THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
-
-function NewOrderRow({placeholder, svg, input}) {
-  return (
-    <View>
-      <Text style={{marginBottom: 10, fontSize: 14, color: TEXT_COLOR}}>
-        {placeholder}
-      </Text>
-      <View
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-        }}>
-        {svg}
-        {input}
-      </View>
-    </View>
-  );
-}
+import NewOrderRow from '../Components/NewOrderRow';
 
 export default class NewOrderScreen extends Component {
   render() {

@@ -1,46 +1,16 @@
 import React, {Component} from 'react';
 import {
-  Image,
   ImageBackground,
   Text,
   ScrollView,
   View,
   TouchableOpacity,
 } from 'react-native';
-import Button from '../Components/Button';
-import Checkbox from '../Components/Checkbox';
-import Heading from '../Components/Heading';
 import InputBox from '../Components/InputBox';
-import DatePickerBox from '../Components/DatePickerBox';
-import TimePickerBox from '../Components/TimePickerBox';
-import Logo from '../Components/Logo';
 import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
-import Svg, {G, Path} from 'react-native-svg';
 import Header from '../Components/Header';
 import {MenuCarousel} from '../Components/MenuCarousel';
-
-function MenuBtn({placeholder, svg, onPress}) {
-  return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={{
-        width: 150,
-        height: 140,
-        backgroundColor: WHITE,
-        borderWidth: 1,
-        borderRadius: 8,
-        borderColor: FORTH,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginVertical: 20,
-      }}>
-      {svg}
-      <Text style={{marginTop: 15}}>{placeholder}</Text>
-    </TouchableOpacity>
-  );
-}
 
 export default class MenuSelectScreen extends Component {
   render() {

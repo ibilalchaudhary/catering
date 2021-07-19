@@ -17,28 +17,7 @@ import Logo from '../Components/Logo';
 import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
-
-function MenuBtn({placeholder, svg, onPress}) {
-  return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={{
-        width: 150,
-        height: 140,
-        backgroundColor: WHITE,
-        borderWidth: 1,
-        borderRadius: 8,
-        borderColor: FORTH,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginVertical: 20,
-      }}>
-      {svg}
-      <Text style={{marginTop: 15}}>{placeholder}</Text>
-    </TouchableOpacity>
-  );
-}
+import MenuBtn from '../Components/MenuBtn';
 
 export default class MenuSelectScreen extends Component {
   render() {
