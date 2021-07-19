@@ -74,6 +74,7 @@ export default class CustomMenuScreen extends Component {
             backgroundColor: '#FFCA40',
             borderRadius: 12,
             marginHorizontal: 20,
+            marginVertical: 16,
           }}>
           <View
             style={{
