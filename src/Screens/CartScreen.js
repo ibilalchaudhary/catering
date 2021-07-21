@@ -5,6 +5,7 @@ import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
 import Button from '../Components/Button';
 import MenuCarouselItem from '../Components/MenuCarouselItem';
+
 export default class CartScreen extends Component {
   render() {
     const navigation = this.props.navigation;

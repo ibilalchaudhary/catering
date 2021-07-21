@@ -3,7 +3,7 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import MenuCard from '../Components/MenuCard';
 import {ScrollView, View} from 'react-native';
 import Button from '../Components/Button';
-import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
+import {WHITE} from '../Constants/Colors';
 
 const Tab = createMaterialTopTabNavigator();
 

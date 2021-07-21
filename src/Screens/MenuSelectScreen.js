@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
-import {
-  Image,
-  ImageBackground,
-  Text,
-  ScrollView,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import {ImageBackground, ScrollView, View} from 'react-native';
 import Logo from '../Components/Logo';
-import {THIRD, WHITE} from '../Constants/Colors';
+import {THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
 import MenuBtn from '../Components/MenuBtn';

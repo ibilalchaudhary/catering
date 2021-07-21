@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, TextInput, TouchableOpacity} from 'react-native';
+import {TextInput, TouchableOpacity} from 'react-native';
 import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import Svg, {Path} from 'react-native-svg';
 

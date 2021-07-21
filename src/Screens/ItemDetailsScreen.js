@@ -1,14 +1,10 @@
 import React, {Component} from 'react';
-import {Text, ScrollView, View, TouchableOpacity, Image} from 'react-native';
-import InputBox from '../Components/InputBox';
-import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {Text, ScrollView, View, Image} from 'react-native';
+import {FORTH, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
-import Svg, {G, Path} from 'react-native-svg';
+import Svg, {Path} from 'react-native-svg';
 import Header from '../Components/Header';
-import MenuItem from '../Components/MenuItem';
-import ItemCarousel from '../Components/ItemCarousel';
 import Button from '../Components/Button';
-import RadioBtn from '../Components/RadioBtn';
 import AddOn from '../Components/AddOn';
 
 export default class CustomMenuCreationScreen extends Component {

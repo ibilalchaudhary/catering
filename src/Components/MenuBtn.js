@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {FORTH, WHITE} from '../Constants/Colors';
 
 export default function MenuBtn({placeholder, svg, onPress}) {

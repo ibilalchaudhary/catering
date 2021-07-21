@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import {Text, ScrollView, View, TouchableOpacity, Image} from 'react-native';
-import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {View} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
-import Heading from '../Components/Heading';
 import InputBox from '../Components/InputBox';
 import Button from '../Components/Button';
 

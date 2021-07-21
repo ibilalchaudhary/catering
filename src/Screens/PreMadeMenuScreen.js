@@ -1,13 +1,7 @@
 import React, {Component} from 'react';
-import {
-  ImageBackground,
-  Text,
-  ScrollView,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import {ImageBackground, ScrollView, View} from 'react-native';
 import InputBox from '../Components/InputBox';
-import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
 import {MenuCarousel} from '../Components/MenuCarousel';

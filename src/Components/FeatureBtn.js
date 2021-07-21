@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
 import {FORTH, PRIMARY, WHITE} from '../Constants/Colors';
 

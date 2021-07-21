@@ -12,8 +12,8 @@ import Checkbox from '../Components/Checkbox';
 import Heading from '../Components/Heading';
 import InputBox from '../Components/InputBox';
 import Logo from '../Components/Logo';
-import {TEXT_COLOR, THIRD} from '../Constants/Colors';
-import {Height, Width} from '../Constants/Constants';
+import {TEXT_COLOR} from '../Constants/Colors';
+import {Height} from '../Constants/Constants';
 
 export default class RegisterScreen extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {View, TextInput, TouchableOpacity, Text} from 'react-native';
-import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
+import {View, TouchableOpacity, Text} from 'react-native';
+import {PRIMARY, TEXT_COLOR} from '../Constants/Colors';
 import DatePicker from 'react-native-date-picker';
 import Button from './Button';
 

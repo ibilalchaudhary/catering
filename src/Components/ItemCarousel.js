@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Image, Text, View, TouchableOpacity, ScrollView} from 'react-native';
-import {FORTH, PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
+import {Image, Text, TouchableOpacity, ScrollView} from 'react-native';
+import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 
 function SelectableMenuItem({

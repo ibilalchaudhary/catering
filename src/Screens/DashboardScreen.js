@@ -9,10 +9,8 @@ import {
 } from 'react-native';
 import {Height, USER_NAME} from '../Constants/Constants';
 import Heading from '../Components/Heading';
-import {TEXT_COLOR, THIRD} from '../Constants/Colors';
+import {TEXT_COLOR} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
-import Button from '../Components/Button';
-import MenuCard from '../Components/MenuCard';
 import TopTabNavigation from '../Navigation/TopTabNavigation';
 
 export default class DashboardScreen extends Component {

@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import {
   ImageBackground,
   ScrollView,
@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import Button from '../Components/Button';
 import Logo from '../Components/Logo';
-import {FORTH, PRIMARY, THIRD, WHITE} from '../Constants/Colors';
+import {THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
 import FeatureBtn from '../Components/FeatureBtn';

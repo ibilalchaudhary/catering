@@ -1,15 +1,6 @@
 import React, {Component} from 'react';
-import {
-  Image,
-  ImageBackground,
-  Text,
-  ScrollView,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import {ImageBackground, Text, ScrollView, View} from 'react-native';
 import Button from '../Components/Button';
-import Checkbox from '../Components/Checkbox';
-import Heading from '../Components/Heading';
 import InputBox from '../Components/InputBox';
 import DatePickerBox from '../Components/DatePickerBox';
 import TimePickerBox from '../Components/TimePickerBox';

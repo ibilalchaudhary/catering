@@ -1,6 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, Text} from 'react-native';
-import {PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 
 export default function Button({placeholder, onPress, veriant}) {
   if (veriant === 'primary') {

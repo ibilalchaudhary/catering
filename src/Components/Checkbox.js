@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {Text, View} from 'react-native';
-import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
+import React from 'react';
+import {View} from 'react-native';
+import {PRIMARY, TEXT_COLOR} from '../Constants/Colors';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 
 export default function Checkbox({placeholder}) {

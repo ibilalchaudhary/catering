@@ -1,9 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
-import Carousel from 'react-native-snap-carousel';
-import {FORTH, PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
-import {Width} from '../Constants/Constants';
-import Button from './Button';
+import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 
 export default function MenuItem({lastItem, variant, onPress}) {

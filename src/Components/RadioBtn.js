@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Text} from 'react-native';
 import RadioButton from 'react-native-radio-button';
 import {PRIMARY} from '../Constants/Colors';
 
