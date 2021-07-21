@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {Text, ScrollView, View, TouchableOpacity} from 'react-native';
+import {ScrollView, View, TouchableOpacity} from 'react-native';
 import InputBox from '../Components/InputBox';
-import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {PRIMARY, THIRD, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
 import Header from '../Components/Header';
 import MenuItem from '../Components/MenuItem';
-import ItemCarousel from '../Components/ItemCarousel';
 
 export default class CustomMenuCreationScreen extends Component {
   render() {
@@ -41,6 +40,9 @@ export default class CustomMenuCreationScreen extends Component {
           </View>
         </ScrollView>
         <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('Cart');
+          }}
           style={{
             position: 'absolute',
             bottom: 50,

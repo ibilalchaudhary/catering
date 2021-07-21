@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import Svg, {Path} from 'react-native-svg';
-import {PRIMARY, WHITE} from '../Constants/Colors';
+import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 
 export default function Header({light, placeholder, backPath, navigation}) {
   return (
@@ -27,7 +27,7 @@ export default function Header({light, placeholder, backPath, navigation}) {
           xmlns="http://www.w3.org/2000/svg"
           width={20.562}
           height={15.501}
-          fill="#000000"
+          fill={light ? WHITE : TEXT_COLOR}
           viewBox="0 0 17.562 13.501">
           <Path
             data-name="Icon ionic-ios-arrow-round-back"

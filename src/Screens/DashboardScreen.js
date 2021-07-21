@@ -13,6 +13,7 @@ import {TEXT_COLOR, THIRD} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 import Button from '../Components/Button';
 import MenuCard from '../Components/MenuCard';
+import TopTabNavigation from '../Navigation/TopTabNavigation';
 
 export default class DashboardScreen extends Component {
   render() {
@@ -22,84 +23,30 @@ export default class DashboardScreen extends Component {
       <>
         {isOrdered ? (
           <View style={{height: Height, flex: 1, backgroundColor: '#FFFFFF'}}>
-            <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
-              <View
-                style={{
-                  paddingVertical: 20,
-                  display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                }}>
-                <TouchableOpacity
-                  onPress={() => {
-                    navigation.navigate('EditProfile');
-                  }}>
-                  <Image
-                    source={require('../Assets/userPic.png')}
-                    style={{width: 50, height: 50}}
-                  />
-                </TouchableOpacity>
-                <Image
-                  source={require('../Assets/logo.png')}
-                  style={{width: 110, height: 50}}
-                />
-              </View>
-
-              <View style={{marginVertical: 20}}>
-                <MenuCard
-                  chairs={true}
-                  music={true}
-                  ballons={true}
-                  lights={true}
-                  table={true}
-                />
-                <MenuCard
-                  chairs={true}
-                  music={true}
-                  ballons={false}
-                  lights={true}
-                  table={true}
-                />
-                <MenuCard
-                  chairs={true}
-                  music={false}
-                  ballons={false}
-                  lights={true}
-                  table={true}
-                />
-                <MenuCard
-                  chairs={true}
-                  music={false}
-                  ballons={true}
-                  lights={true}
-                  table={true}
-                />
-                <MenuCard
-                  chairs={true}
-                  music={false}
-                  ballons={false}
-                  lights={true}
-                  table={true}
-                />
-                <MenuCard
-                  chairs={true}
-                  music={true}
-                  ballons={true}
-                  lights={true}
-                  table={true}
-                />
-              </View>
-            </ScrollView>
-            <View style={{height: 60, marginHorizontal: 20}}>
-              <Button
-                veriant="primary"
-                placeholder="Place Order"
+            <View
+              style={{
+                paddingVertical: 20,
+                marginHorizontal: 20,
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
+              <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('NewOrder');
-                }}
+                  navigation.navigate('EditProfile');
+                }}>
+                <Image
+                  source={require('../Assets/userPic.png')}
+                  style={{width: 50, height: 50}}
+                />
+              </TouchableOpacity>
+              <Image
+                source={require('../Assets/logo.png')}
+                style={{width: 110, height: 50}}
               />
             </View>
+            <TopTabNavigation />
           </View>
         ) : (
           <ImageBackground

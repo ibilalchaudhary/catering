@@ -1,71 +1,59 @@
 import React, {Component} from 'react';
-import {Text, ScrollView, View, TouchableOpacity} from 'react-native';
-import InputBox from '../Components/InputBox';
-import {FORTH, PRIMARY, TEXT_COLOR, THIRD, WHITE} from '../Constants/Colors';
+import {ScrollView, View, TextInput, ImageBackground} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
-import Svg, {G, Path} from 'react-native-svg';
 import Header from '../Components/Header';
-import MenuItem from '../Components/MenuItem';
-import ItemCarousel from '../Components/ItemCarousel';
+import Button from '../Components/Button';
+import MenuCarouselItem from '../Components/MenuCarouselItem';
 export default class CartScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     return (
-      <View style={{backgroundColor: WHITE, height: Height, width: Width}}>
+      <ImageBackground
+        source={require('../Assets/cart_background.png')}
+        style={{backgroundColor: WHITE, height: Height, width: Width}}>
         <Header
           light={true}
-          placeholder=""
-          backPath="CustomMenu"
+          placeholder="Cart"
+          backPath="CustomMenuCreation"
           navigation={navigation}
         />
         <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
-          <InputBox variant="gray" placeholder="Enter Name of Menu" />
+          <MenuCarouselItem title="Menu name" button={false} istitle={true} />
           <View
             style={{
-              backgroundColor: THIRD,
-              borderRadius: 5,
-              padding: 20,
-              marginTop: 10,
-              marginBottom: 70,
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginVertical: 10,
             }}>
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" />
-            <MenuItem variant="secondary" lastItem={true} />
-          </View>
-        </ScrollView>
-        <TouchableOpacity
-          style={{
-            position: 'absolute',
-            bottom: 50,
-            right: 20,
-            backgroundColor: PRIMARY,
-            width: 60,
-            height: 60,
-            borderRadius: 60,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={20.537}
-            height={16.786}
-            viewBox="0 0 24.537 16.786">
-            <Path
-              data-name="Icon ionic-ios-arrow-round-back"
-              d="M15.51 15.986a1.068 1.068 0 01-.008-1.5l4.962-4.979H1.555a1.063 1.063 0 010-2.126h18.909l-4.971-4.979a1.076 1.076 0 01.008-1.5 1.058 1.058 0 011.5.008l6.733 6.778h0a1.193 1.193 0 01.221.335 1.014 1.014 0 01.082.409 1.066 1.066 0 01-.3.744l-6.736 6.785a1.041 1.041 0 01-1.491.025z"
-              fill="#fff"
-              stroke="#fff"
+            <TextInput
+              placeholder="Enter Coupon Code"
+              style={{
+                height: 50,
+                width: '70%',
+                backgroundColor: 'transparent',
+                borderColor: WHITE,
+                borderWidth: 1,
+                borderTopLeftRadius: 8,
+                borderBottomLeftRadius: 8,
+                paddingHorizontal: 20,
+                color: WHITE,
+              }}
+              placeholderTextColor={WHITE}
             />
-          </Svg>
-        </TouchableOpacity>
-      </View>
+            <Button veriant="third" placeholder="Apply" />
+          </View>
+          <Button
+            veriant="third"
+            placeholder="Checkout"
+            onPress={() => {
+              navigation.navigate('OrderPlaced');
+            }}
+          />
+          <View style={{marginBottom: 50}} />
+        </ScrollView>
+      </ImageBackground>
     );
   }
 }
