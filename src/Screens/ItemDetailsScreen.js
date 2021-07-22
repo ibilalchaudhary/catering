@@ -6,10 +6,12 @@ import Svg, {Path} from 'react-native-svg';
 import Header from '../Components/Header';
 import Button from '../Components/Button';
 import AddOn from '../Components/AddOn';
+import Navigate from '../Navigation/Navigate';
 
 export default class CustomMenuCreationScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <View style={{backgroundColor: WHITE, height: Height, width: Width}}>
         <Header
@@ -105,7 +107,13 @@ export default class CustomMenuCreationScreen extends Component {
           <AddOn />
           <AddOn />
           <AddOn />
-          <Button placeholder="Add to Menu" veriant="primary" />
+          <Button
+            placeholder="Add to Menu"
+            veriant="primary"
+            onPress={() => {
+              NavigateTo('CustomMenu', navigation);
+            }}
+          />
           <View style={{marginBottom: 50}} />
         </ScrollView>
       </View>

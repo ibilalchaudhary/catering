@@ -9,10 +9,12 @@ import {PRIMARY, TEXT_COLOR, THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
 import NewOrderRow from '../Components/NewOrderRow';
+import Navigate from '../Navigation/Navigate';
 
 export default class NewOrderScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <View style={{backgroundColor: THIRD, height: Height, width: Width}}>
         <ImageBackground
@@ -88,7 +90,7 @@ export default class NewOrderScreen extends Component {
                 placeholder="Next"
                 veriant="primary"
                 onPress={() => {
-                  navigation.navigate('MenuSelect');
+                  NavigateTo('MenuSelect', navigation);
                 }}
               />
             </View>

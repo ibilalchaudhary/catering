@@ -4,6 +4,7 @@ import {TEXT_COLOR, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
 import Svg, {G, Path, Ellipse} from 'react-native-svg';
+import Navigate from '../Navigation/Navigate';
 
 function EditProfileHeadings({svg, text}) {
   return (
@@ -60,6 +61,7 @@ function EditProfileHeadingsTouchAble({text, svg, lastItem, onPress}) {
 export default class CustomMenuScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <View style={{backgroundColor: WHITE, height: Height, width: Width}}>
         <Header
@@ -100,7 +102,11 @@ export default class CustomMenuScreen extends Component {
               <View style={{flex: 1}}>
                 <Text style={{fontSize: 16, color: TEXT_COLOR}}>Item Name</Text>
               </View>
-              <TouchableOpacity style={{marginRight: 20}} onPress={() => {}}>
+              <TouchableOpacity
+                style={{marginRight: 20}}
+                onPress={() => {
+                  NavigateTo('EditProfile', navigation);
+                }}>
                 <Svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={21.306}
@@ -196,7 +202,10 @@ export default class CustomMenuScreen extends Component {
               marginBottom: 50,
             }}>
             <EditProfileHeadingsTouchAble
-              text={'Adresses'}
+              onPress={() => {
+                NavigateTo('Addresses', navigation);
+              }}
+              text={'Addresses'}
               svg={
                 <Svg
                   data-name="location (1)"
@@ -219,7 +228,7 @@ export default class CustomMenuScreen extends Component {
 
             <EditProfileHeadingsTouchAble
               onPress={() => {
-                navigation.navigate('FavoriteMenu');
+                NavigateTo('FavoriteMenu', navigation);
               }}
               text={'Favorite Menus '}
               svg={
@@ -234,6 +243,9 @@ export default class CustomMenuScreen extends Component {
               }
             />
             <EditProfileHeadingsTouchAble
+              onPress={() => {
+                NavigateTo('Payment', navigation);
+              }}
               text={'Payment Options'}
               svg={
                 <Svg
@@ -269,7 +281,7 @@ export default class CustomMenuScreen extends Component {
               text={'Change Password'}
               lastItem={true}
               onPress={() => {
-                navigation.navigate('ChangePassword');
+                NavigateTo('ChangePassword', navigation);
               }}
               svg={
                 <Svg

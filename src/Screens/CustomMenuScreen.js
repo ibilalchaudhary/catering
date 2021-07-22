@@ -7,10 +7,11 @@ import Svg, {Path} from 'react-native-svg';
 import Header from '../Components/Header';
 import MenuItem from '../Components/MenuItem';
 import CatagoryRow from '../Components/CatagoryRow';
-
+import Navigate from '../Navigation/Navigate';
 export default class CustomMenuScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <View style={{backgroundColor: WHITE, height: Height, width: Width}}>
         <Header
@@ -45,7 +46,7 @@ export default class CustomMenuScreen extends Component {
         </ScrollView>
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('CustomMenuCreation');
+            NavigateTo('CustomMenuCreation', navigation);
           }}
           style={{
             position: 'absolute',

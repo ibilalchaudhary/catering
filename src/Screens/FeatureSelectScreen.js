@@ -11,12 +11,13 @@ import {THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Svg, {G, Path} from 'react-native-svg';
 import FeatureBtn from '../Components/FeatureBtn';
-
+import Navigate from '../Navigation/Navigate';
 export default class FeatureSelectScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     const {toPath} = this.props.route.params;
     let selected;
+    const {NavigateTo} = Navigate();
     return (
       <View style={{backgroundColor: THIRD, height: Height, width: Width}}>
         <ImageBackground
@@ -585,7 +586,7 @@ export default class FeatureSelectScreen extends Component {
                   placeholder="Next"
                   veriant="primary"
                   onPress={() => {
-                    navigation.navigate(toPath);
+                    NavigateTo(toPath, navigation);
                   }}
                 />
               ) : (
@@ -593,7 +594,7 @@ export default class FeatureSelectScreen extends Component {
                   placeholder="Skip"
                   veriant="skip"
                   onPress={() => {
-                    navigation.navigate(toPath);
+                    NavigateTo(toPath, navigation);
                   }}
                 />
               )}

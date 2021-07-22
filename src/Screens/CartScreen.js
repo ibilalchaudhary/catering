@@ -5,10 +5,11 @@ import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
 import Button from '../Components/Button';
 import MenuCarouselItem from '../Components/MenuCarouselItem';
-
+import Navigate from '../Navigation/Navigate';
 export default class CartScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <ImageBackground
         source={require('../Assets/cart_background.png')}
@@ -43,13 +44,13 @@ export default class CartScreen extends Component {
               }}
               placeholderTextColor={WHITE}
             />
-            <Button veriant="third" placeholder="Apply" />
+            <Button veriant="third" placeholder="Apply" onPress={() => {}} />
           </View>
           <Button
             veriant="third"
             placeholder="Checkout"
             onPress={() => {
-              navigation.navigate('OrderPlaced');
+              NavigateTo('OrderPlaced', navigation);
             }}
           />
           <View style={{marginBottom: 50}} />

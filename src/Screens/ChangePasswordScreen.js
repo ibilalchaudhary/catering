@@ -5,10 +5,11 @@ import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
 import InputBox from '../Components/InputBox';
 import Button from '../Components/Button';
-
+import Navigate from '../Navigation/Navigate';
 export default class CustomMenuScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <View
         style={{
@@ -54,7 +55,9 @@ export default class CustomMenuScreen extends Component {
             <Button
               veriant="primary"
               placeholder="Change Password"
-              onPress={() => {}}
+              onPress={() => {
+                NavigateTo('Dashboard', navigation);
+              }}
             />
           </View>
         </View>

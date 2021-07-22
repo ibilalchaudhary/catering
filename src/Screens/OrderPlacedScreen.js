@@ -4,10 +4,11 @@ import Svg, {G, Path} from 'react-native-svg';
 import Button from '../Components/Button';
 import {THIRD} from '../Constants/Colors';
 import {Height} from '../Constants/Constants';
-
+import Navigate from '../Navigation/Navigate';
 export default class OrderPlacedScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <View style={{flex: 1, height: Height, paddingHorizontal: 20}}>
         <View
@@ -53,7 +54,7 @@ export default class OrderPlacedScreen extends Component {
           veriant="primary"
           placeholder="Back to menu"
           onPress={() => {
-            navigation.navigate('MenuSelect');
+            NavigateTo('MenuSelect', navigation);
           }}
         />
       </View>

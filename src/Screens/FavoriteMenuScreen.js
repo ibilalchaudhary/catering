@@ -5,7 +5,6 @@ import {THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
 import {MenuCarousel} from '../Components/MenuCarousel';
-
 export default class FavoriteMenuScreen extends Component {
   render() {
     const navigation = this.props.navigation;
