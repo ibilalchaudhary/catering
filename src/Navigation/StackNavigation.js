@@ -3,6 +3,7 @@ import HomeScreen from '../Screens/HomeScreen';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from '../Screens/LoginScreen';
 import RegisterScreen from '../Screens/RegisterScreen';
+import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
 import DashboardScreen from '../Screens/DashboardScreen';
 import NewOrderScreen from '../Screens/NewOrderScreen';
 import MenuSelectScreen from '../Screens/MenuSelectScreen';
@@ -29,6 +30,7 @@ export default function StackNavigation() {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Register" component={RegisterScreen} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
       <Stack.Screen name="Dashboard" component={DashboardScreen} />
       <Stack.Screen name="NewOrder" component={NewOrderScreen} />
       <Stack.Screen name="MenuSelect" component={MenuSelectScreen} />

@@ -13,10 +13,11 @@ import InputBox from '../Components/InputBox';
 import Logo from '../Components/Logo';
 import {TEXT_COLOR, THIRD} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
-
+import Navigate from '../Navigation/Navigate';
 export default class LoginScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <View style={{backgroundColor: THIRD, height: Height, width: Width}}>
         <ImageBackground
@@ -40,7 +41,10 @@ export default class LoginScreen extends Component {
                 marginVertical: 20,
               }}>
               <Checkbox placeholder="Remember" />
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  NavigateTo('ForgotPassword', navigation);
+                }}>
                 <Text style={{fontSize: 16, color: TEXT_COLOR}}>
                   Forgot Password?
                 </Text>
@@ -50,7 +54,7 @@ export default class LoginScreen extends Component {
               placeholder="Login"
               veriant="primary"
               onPress={() => {
-                navigation.navigate('Dashboard');
+                NavigateTo('Dashboard', navigation);
               }}
             />
             <View
@@ -66,7 +70,7 @@ export default class LoginScreen extends Component {
               </Text>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('Register');
+                  NavigateTo('Register', navigation);
                 }}>
                 <Text
                   style={{
@@ -84,7 +88,9 @@ export default class LoginScreen extends Component {
               <Button
                 placeholder="Continue as Guest"
                 veriant="secondary"
-                onPress={() => {}}
+                onPress={() => {
+                  NavigateTo('Dashboard', navigation);
+                }}
               />
             </View>
           </ScrollView>

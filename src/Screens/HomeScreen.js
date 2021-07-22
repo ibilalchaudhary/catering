@@ -3,10 +3,12 @@ import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
 import {Height} from '../Constants/Constants';
 import {WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
+import Navigate from '../Navigation/Navigate';
 
 export default class HomeScreen extends Component {
   render() {
     const navigation = this.props.navigation;
+    const {NavigateTo} = Navigate();
     return (
       <ImageBackground
         source={require('../Assets/home_background.png')}
@@ -125,7 +127,7 @@ export default class HomeScreen extends Component {
               marginVertical: 10,
             }}
             onPress={() => {
-              navigation.navigate('Login');
+              NavigateTo('Login', navigation);
             }}>
             <Svg
               xmlns="http://www.w3.org/2000/svg"
