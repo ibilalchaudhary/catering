@@ -26,7 +26,7 @@ function HeaderDashboard({NavigateTo, navigation}) {
       }}>
       <TouchableOpacity
         onPress={() => {
-          NavigateTo('EditProfile', navigation);
+          NavigateTo('Profile', navigation);
         }}>
         <Image
           source={require('../Assets/userPic.png')}
