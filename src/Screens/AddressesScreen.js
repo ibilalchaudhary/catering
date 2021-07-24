@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {TouchableOpacity, View, Text, ScrollView} from 'react-native';
 import {PRIMARY, SECONDARY, THIRD, WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
@@ -9,14 +9,18 @@ import Navigate from '../Navigation/Navigate';
 import Svg, {G, Path} from 'react-native-svg';
 
 function SavedAddresses() {
+  const [focuse, setFocuse] = useState(false);
   return (
     <TouchableOpacity
+      onPress={() => {
+        setFocuse(true);
+      }}
       style={{
         display: 'flex',
         flexDirection: 'column',
         padding: 18,
         marginHorizontal: 20,
-        borderWidth: 1,
+        borderWidth: focuse ? 2 : 1,
         borderRadius: 8,
         borderColor: '#FF6F00',
         marginVertical: 10,
