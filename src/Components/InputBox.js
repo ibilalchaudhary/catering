@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import {TextInput, TouchableOpacity} from 'react-native';
+import {TextInput, TouchableOpacity, View} from 'react-native';
 import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import Svg, {Path} from 'react-native-svg';
 
-export default function InputBox({placeholder, variant, secureTextEntry}) {
+export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
   const [focuse, setFocuse] = useState(false);
   if (variant === 'light') {
     return (
@@ -129,6 +129,42 @@ export default function InputBox({placeholder, variant, secureTextEntry}) {
           placeholder={placeholder}
           placeholderTextColor={TEXT_COLOR}
           secureTextEntry={secureTextEntry}
+          onFocus={() => {
+            setFocuse(true);
+          }}
+          onBlur={() => {
+            setFocuse(false);
+          }}
+        />
+      </TouchableOpacity>
+    );
+  } else if (variant === 'graywithsvg') {
+    return (
+      <TouchableOpacity
+        style={{
+          flex: 1,
+          flexDirection: 'row',
+          alignItems: 'center',
+          maxHeight: 45,
+          borderRadius: 5,
+          backgroundColor: '#f6f6f6',
+          paddingHorizontal: 15,
+          borderWidth: focuse ? 1 : 0,
+          borderColor: PRIMARY,
+          marginVertical: 8,
+        }}
+        onFocus={() => {
+          setFocuse(true);
+        }}
+        onBlur={() => {
+          setFocuse(false);
+        }}>
+        {svg}
+        <TextInput
+          placeholder={placeholder}
+          placeholderTextColor={TEXT_COLOR}
+          secureTextEntry={secureTextEntry}
+          style={{marginLeft: 20}}
           onFocus={() => {
             setFocuse(true);
           }}

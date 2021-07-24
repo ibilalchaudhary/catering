@@ -13,10 +13,11 @@ import CustomMenuScreen from '../Screens/CustomMenuScreen';
 import CustomMenuCreationScreen from '../Screens/CustomMenuCreationScreen';
 import ItemDetailsScreen from '../Screens/ItemDetailsScreen';
 import CartScreen from '../Screens/CartScreen';
-import EditProfileScreen from '../Screens/EditProfileScreen';
+import ProfileScreen from '../Screens/ProfileScreen';
 import ChangePasswordScreen from '../Screens/ChangePasswordScreen';
 import FavoriteMenuScreen from '../Screens/FavoriteMenuScreen';
 import OrderPlacedScreen from '../Screens/OrderPlacedScreen';
+import EditProfileScreen from '../Screens/EditProfileScreen';
 
 const Stack = createStackNavigator();
 
@@ -50,10 +51,11 @@ export default function StackNavigation() {
       />
       <Stack.Screen name="ItemDetails" component={ItemDetailsScreen} />
       <Stack.Screen name="Cart" component={CartScreen} />
-      <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="ChangePassword" component={ChangePasswordScreen} />
       <Stack.Screen name="FavoriteMenu" component={FavoriteMenuScreen} />
       <Stack.Screen name="OrderPlaced" component={OrderPlacedScreen} />
+      <Stack.Screen name="EditProfile" component={EditProfileScreen} />
     </Stack.Navigator>
   );
 }
