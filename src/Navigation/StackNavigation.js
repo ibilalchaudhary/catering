@@ -18,6 +18,8 @@ import ChangePasswordScreen from '../Screens/ChangePasswordScreen';
 import FavoriteMenuScreen from '../Screens/FavoriteMenuScreen';
 import OrderPlacedScreen from '../Screens/OrderPlacedScreen';
 import EditProfileScreen from '../Screens/EditProfileScreen';
+import AddCardScreen from '../Screens/AddCardScreen';
+import AddressesScreen from '../Screens/AddressesScreen';
 
 const Stack = createStackNavigator();
 
@@ -56,6 +58,8 @@ export default function StackNavigation() {
       <Stack.Screen name="FavoriteMenu" component={FavoriteMenuScreen} />
       <Stack.Screen name="OrderPlaced" component={OrderPlacedScreen} />
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+      <Stack.Screen name="AddCard" component={AddCardScreen} />
+      <Stack.Screen name="Addresses" component={AddressesScreen} />
     </Stack.Navigator>
   );
 }

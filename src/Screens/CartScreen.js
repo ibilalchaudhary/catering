@@ -50,7 +50,7 @@ export default class CartScreen extends Component {
             veriant="third"
             placeholder="Checkout"
             onPress={() => {
-              NavigateTo('OrderPlaced', navigation);
+              NavigateTo('AddCard', navigation);
             }}
           />
           <View style={{marginBottom: 50}} />

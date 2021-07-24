@@ -138,7 +138,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
         />
       </TouchableOpacity>
     );
-  } else if (variant === 'graywithsvg') {
+  } else if (variant === 'GrayWithSvg') {
     return (
       <TouchableOpacity
         style={{
