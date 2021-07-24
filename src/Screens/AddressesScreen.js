@@ -1,36 +1,10 @@
-import React, {Component, useState} from 'react';
-import {TouchableOpacity, View, Text, ScrollView} from 'react-native';
-import {PRIMARY, SECONDARY, THIRD, WHITE} from '../Constants/Colors';
+import React, {Component} from 'react';
+import {View, Text, ScrollView} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
-import InputBox from '../Components/InputBox';
-import Button from '../Components/Button';
 import Navigate from '../Navigation/Navigate';
-import Svg, {G, Path} from 'react-native-svg';
-
-function SavedAddresses() {
-  const [focuse, setFocuse] = useState(false);
-  return (
-    <TouchableOpacity
-      onPress={() => {
-        setFocuse(true);
-      }}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        padding: 18,
-        marginHorizontal: 20,
-        borderWidth: focuse ? 2 : 1,
-        borderRadius: 8,
-        borderColor: '#FF6F00',
-        marginVertical: 10,
-      }}>
-      <Text>Plot # 43 , Phase 5, DHA</Text>
-      <Text style={{color: SECONDARY}}>Lahore</Text>
-    </TouchableOpacity>
-  );
-}
-
+import SavedAddresses from '../Components/SavedAddresses';
 export default class EditProfileScreen extends Component {
   render() {
     const navigation = this.props.navigation;
@@ -58,17 +32,24 @@ export default class EditProfileScreen extends Component {
             }}>
             Delivery Address
           </Text>
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
-          <SavedAddresses />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
+          <SavedAddresses navigation={navigation} />
         </ScrollView>
       </View>
     );

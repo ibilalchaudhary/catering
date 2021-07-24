@@ -8,7 +8,7 @@ export default function Button({placeholder, onPress, veriant}) {
       <TouchableOpacity
         style={{
           flex: 1,
-          height: 50,
+          minHeight: 50,
           backgroundColor: PRIMARY,
           borderRadius: 5,
           display: 'flex',
@@ -25,7 +25,7 @@ export default function Button({placeholder, onPress, veriant}) {
       <TouchableOpacity
         style={{
           flex: 1,
-          height: 45,
+          minHeight: 45,
           backgroundColor: WHITE,
           borderRadius: 5,
           display: 'flex',
@@ -42,7 +42,7 @@ export default function Button({placeholder, onPress, veriant}) {
       <TouchableOpacity
         style={{
           flex: 1,
-          height: 45,
+          minHeight: 45,
           backgroundColor: '#7D7D7D',
           borderRadius: 5,
           display: 'flex',
@@ -59,7 +59,7 @@ export default function Button({placeholder, onPress, veriant}) {
       <TouchableOpacity
         style={{
           flex: 1,
-          height: 50,
+          minHeight: 50,
           backgroundColor: PRIMARY,
           borderRadius: 5,
           display: 'flex',
@@ -78,7 +78,7 @@ export default function Button({placeholder, onPress, veriant}) {
       <TouchableOpacity
         style={{
           flex: 1,
-          height: 50,
+          minHeight: 50,
           backgroundColor: WHITE,
           borderRadius: 5,
           display: 'flex',

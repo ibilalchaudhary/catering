@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeScreen from '../Screens/HomeScreen';
 import {createStackNavigator} from '@react-navigation/stack';
+
 import LoginScreen from '../Screens/LoginScreen';
 import RegisterScreen from '../Screens/RegisterScreen';
 import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
@@ -20,6 +21,8 @@ import OrderPlacedScreen from '../Screens/OrderPlacedScreen';
 import EditProfileScreen from '../Screens/EditProfileScreen';
 import AddCardScreen from '../Screens/AddCardScreen';
 import AddressesScreen from '../Screens/AddressesScreen';
+import CheckOutScreen from '../Screens/CheckOutScreen';
+import MapViewScreen from '../Screens/MapViewScreen';
 
 const Stack = createStackNavigator();
 
@@ -60,6 +63,8 @@ export default function StackNavigation() {
       <Stack.Screen name="EditProfile" component={EditProfileScreen} />
       <Stack.Screen name="AddCard" component={AddCardScreen} />
       <Stack.Screen name="Addresses" component={AddressesScreen} />
+      <Stack.Screen name="CheckOut" component={CheckOutScreen} />
+      <Stack.Screen name="MapView" component={MapViewScreen} />
     </Stack.Navigator>
   );
 }

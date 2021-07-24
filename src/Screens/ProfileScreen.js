@@ -242,7 +242,7 @@ export default class ProfileScreen extends Component {
                 </Svg>
               }
             />
-            <EditProfileHeadingsTouchAble
+            {/* <EditProfileHeadingsTouchAble
               onPress={() => {
                 NavigateTo('Payment', navigation);
               }}
@@ -276,7 +276,7 @@ export default class ProfileScreen extends Component {
                   </G>
                 </Svg>
               }
-            />
+            /> */}
             <EditProfileHeadingsTouchAble
               text={'Change Password'}
               lastItem={true}

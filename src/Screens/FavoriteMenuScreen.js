@@ -18,7 +18,7 @@ export default class FavoriteMenuScreen extends Component {
             placeholder="Favorite Menu"
             backPath="FeatureSelectPreMade"
             navigation={navigation}
-            backPath="EditProfile"
+            backPath="Profile"
           />
           <ScrollView style={{flex: 1}}>
             <View style={{paddingHorizontal: 20}}>

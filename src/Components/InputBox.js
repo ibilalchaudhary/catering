@@ -164,7 +164,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
           placeholder={placeholder}
           placeholderTextColor={TEXT_COLOR}
           secureTextEntry={secureTextEntry}
-          style={{marginLeft: 20}}
+          style={{marginLeft: 20, flex: 1}}
           onFocus={() => {
             setFocuse(true);
           }}

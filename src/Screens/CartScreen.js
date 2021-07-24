@@ -28,6 +28,7 @@ export default class CartScreen extends Component {
               flexDirection: 'row',
               alignItems: 'center',
               marginVertical: 10,
+              marginBottom: 50,
             }}>
             <TextInput
               placeholder="Enter Coupon Code"
@@ -50,7 +51,7 @@ export default class CartScreen extends Component {
             veriant="third"
             placeholder="Checkout"
             onPress={() => {
-              NavigateTo('AddCard', navigation);
+              NavigateTo('CheckOut', navigation);
             }}
           />
           <View style={{marginBottom: 50}} />
