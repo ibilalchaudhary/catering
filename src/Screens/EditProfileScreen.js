@@ -109,7 +109,13 @@ export default class EditProfileScreen extends Component {
               paddingHorizontal: 20,
               marginBottom: 20,
             }}>
-            <Button veriant="secondary" placeholder="Set Address on Map" />
+            <Button
+              veriant="secondary"
+              placeholder="Set Address on Map"
+              onPress={() => {
+                NavigateTo('MapView', navigation);
+              }}
+            />
             <Button veriant="primary" placeholder="Save" />
           </View>
         </View>

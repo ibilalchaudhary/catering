@@ -1,55 +1,31 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Dimensions} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Dimensions,
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import Header from '../Components/Header';
+import InputBox from '../Components/InputBox';
+import {Height, Width} from '../Constants/Constants';
+import Svg, {G, Path} from 'react-native-svg';
+import Button from '../Components/Button';
+import {WHITE} from '../Constants/Colors';
 
 const MapStyle = [
   {
-    featureType: 'all',
     elementType: 'geometry',
     stylers: [
       {
-        color: '#202c3e',
+        color: '#f5f5f5',
       },
     ],
   },
   {
-    featureType: 'all',
-    elementType: 'labels.text.fill',
-    stylers: [
-      {
-        gamma: 0.01,
-      },
-      {
-        lightness: 20,
-      },
-      {
-        weight: '1.39',
-      },
-      {
-        color: '#ffffff',
-      },
-    ],
-  },
-  {
-    featureType: 'all',
-    elementType: 'labels.text.stroke',
-    stylers: [
-      {
-        weight: '0.96',
-      },
-      {
-        saturation: '9',
-      },
-      {
-        visibility: 'on',
-      },
-      {
-        color: '#000000',
-      },
-    ],
-  },
-  {
-    featureType: 'all',
     elementType: 'labels.icon',
     stylers: [
       {
@@ -58,17 +34,27 @@ const MapStyle = [
     ],
   },
   {
-    featureType: 'landscape',
-    elementType: 'geometry',
+    elementType: 'labels.text.fill',
     stylers: [
       {
-        lightness: 30,
+        color: '#616161',
       },
+    ],
+  },
+  {
+    elementType: 'labels.text.stroke',
+    stylers: [
       {
-        saturation: '9',
+        color: '#f5f5f5',
       },
+    ],
+  },
+  {
+    featureType: 'administrative.land_parcel',
+    elementType: 'labels.text.fill',
+    stylers: [
       {
-        color: '#29446b',
+        color: '#bdbdbd',
       },
     ],
   },
@@ -77,7 +63,16 @@ const MapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        saturation: 20,
+        color: '#eeeeee',
+      },
+    ],
+  },
+  {
+    featureType: 'poi',
+    elementType: 'labels.text.fill',
+    stylers: [
+      {
+        color: '#757575',
       },
     ],
   },
@@ -86,10 +81,16 @@ const MapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        lightness: 20,
+        color: '#e5e5e5',
       },
+    ],
+  },
+  {
+    featureType: 'poi.park',
+    elementType: 'labels.text.fill',
+    stylers: [
       {
-        saturation: -20,
+        color: '#9e9e9e',
       },
     ],
   },
@@ -98,47 +99,84 @@ const MapStyle = [
     elementType: 'geometry',
     stylers: [
       {
-        lightness: 10,
-      },
-      {
-        saturation: -30,
+        color: '#ffffff',
       },
     ],
   },
   {
-    featureType: 'road',
-    elementType: 'geometry.fill',
+    featureType: 'road.arterial',
+    elementType: 'labels.text.fill',
     stylers: [
       {
-        color: '#193a55',
+        color: '#757575',
       },
     ],
   },
   {
-    featureType: 'road',
-    elementType: 'geometry.stroke',
+    featureType: 'road.highway',
+    elementType: 'geometry',
     stylers: [
       {
-        saturation: 25,
+        color: '#dadada',
       },
+    ],
+  },
+  {
+    featureType: 'road.highway',
+    elementType: 'labels.text.fill',
+    stylers: [
       {
-        lightness: 25,
+        color: '#616161',
       },
+    ],
+  },
+  {
+    featureType: 'road.local',
+    elementType: 'labels.text.fill',
+    stylers: [
       {
-        weight: '0.01',
+        color: '#9e9e9e',
+      },
+    ],
+  },
+  {
+    featureType: 'transit.line',
+    elementType: 'geometry',
+    stylers: [
+      {
+        color: '#e5e5e5',
+      },
+    ],
+  },
+  {
+    featureType: 'transit.station',
+    elementType: 'geometry',
+    stylers: [
+      {
+        color: '#eeeeee',
       },
     ],
   },
   {
     featureType: 'water',
-    elementType: 'all',
+    elementType: 'geometry',
     stylers: [
       {
-        lightness: -20,
+        color: '#c9c9c9',
+      },
+    ],
+  },
+  {
+    featureType: 'water',
+    elementType: 'labels.text.fill',
+    stylers: [
+      {
+        color: '#9e9e9e',
       },
     ],
   },
 ];
+
 export default function MapViewScreen({navigation}) {
   return (
     <SafeAreaView style={{flex: 1, position: 'relative'}}>
@@ -153,38 +191,61 @@ export default function MapViewScreen({navigation}) {
         provider={PROVIDER_GOOGLE}
         customMapStyle={MapStyle}
       />
+      <View style={{position: 'absolute', width: Width, height: Height}}>
+        <Header
+          light={false}
+          placeholder=""
+          backPath="Addresses"
+          navigation={navigation}
+        />
+        <View
+          style={{
+            paddingHorizontal: 20,
+            flex: 1,
+            justifyContent: 'space-between',
+            marginBottom: 50,
+          }}>
+          <View style={{height: 60, display: 'flex', flexDirection: 'row'}}>
+            <ScrollView style={{flex: 1}}>
+              <InputBox variant="searchWhite" placeholder="Search" />
+            </ScrollView>
+            <TouchableOpacity
+              style={{
+                height: 45,
+                width: 45,
+                backgroundColor: WHITE,
+                marginVertical: 8,
+                marginLeft: 10,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: 5,
+              }}>
+              <Svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={23}
+                height={23}
+                viewBox="0 0 23 23">
+                <Path
+                  data-name="Icon material-my-location"
+                  d="M11.5 7.318a4.182 4.182 0 104.182 4.182A4.181 4.181 0 0011.5 7.318zm9.346 3.136a9.4 9.4 0 00-8.3-8.3V0h-2.091v2.154a9.4 9.4 0 00-8.3 8.3H0v2.091h2.154a9.4 9.4 0 008.3 8.3V23h2.091v-2.154a9.4 9.4 0 008.3-8.3H23v-2.091zM11.5 18.818a7.318 7.318 0 117.318-7.318 7.313 7.313 0 01-7.318 7.318z"
+                  fill="#fe724c"
+                />
+              </Svg>
+            </TouchableOpacity>
+          </View>
+          <View style={{height: 60}}>
+            <Button veriant="primary" placeholder="Save Location" />
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-  },
-  header: {
-    position: 'absolute',
-    top: 0,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: 90,
-    paddingTop: 30,
-    paddingLeft: 20,
-    width: '100%',
-  },
-  headerBackBtn: {
-    borderRadius: 100 / 2,
-  },
-  headerBackBtnIcon: {color: '#ffffff'},
-  headerScreenName: {
-    color: '#0B2239',
-    fontSize: 15,
-  },
-  headerScreenIcon: {
-    width: 30,
-    height: 30,
-    marginRight: 10,
+    width: Width,
+    height: Height,
   },
 });
