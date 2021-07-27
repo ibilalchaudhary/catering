@@ -942,13 +942,18 @@ export default class CheckOutScreen extends Component {
             </TouchableOpacity>
           </View>
 
-          <Button
-            veriant="primary"
-            placeholder="Confirm Order"
-            onPress={() => {
-              NavigateTo('OrderPlaced', navigation);
-            }}
-          />
+          <View
+            style={{
+              paddingHorizontal: 20,
+            }}>
+            <Button
+              veriant="primary"
+              placeholder="Confirm Order"
+              onPress={() => {
+                NavigateTo('OrderPlaced', navigation);
+              }}
+            />
+          </View>
         </ScrollView>
       </View>
     );
