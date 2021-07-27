@@ -40,9 +40,8 @@ function CardText({heading, text}) {
   );
 }
 
-function PaymentMethods() {
+function PaymentMethods({NavigateTo, navigation}) {
   const [modalVisible, setModalVisible] = useState(false);
-  const {NavigateTo} = Navigate();
   return (
     <>
       <TouchableOpacity
@@ -943,7 +942,7 @@ export default class CheckOutScreen extends Component {
             Payment Method
           </Text>
           <View style={{paddingHorizontal: 20}}>
-            <PaymentMethods />
+            <PaymentMethods NavigateTo={NavigateTo} navigation={navigation} />
             <TouchableOpacity
               style={{
                 display: 'flex',
