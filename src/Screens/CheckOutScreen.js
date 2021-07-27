@@ -40,6 +40,28 @@ function CardText({heading, text}) {
   );
 }
 
+function CardOptions({svg, text, onPress}) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        height: 60,
+        backgroundColor: '#F9F9F9',
+        borderRadius: 8,
+        paddingHorizontal: 20,
+        marginBottom: 20,
+      }}>
+      <View style={{marginRight: 20}}>{svg}</View>
+      <View>
+        <Text style={{fontSize: 16, fontWeight: 'bold'}}>{text}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+}
+
 function PaymentMethods({NavigateTo, navigation}) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
@@ -86,31 +108,21 @@ function PaymentMethods({NavigateTo, navigation}) {
         </View>
       </TouchableOpacity>
       <Modal visible={modalVisible} transparent={true} animationType="fade">
-        <ScrollView style={{flex: 1}}>
-          <View
-            style={{
-              flex: 1,
-              margin: 30,
-              backgroundColor: '#ffffff',
-              borderEndColor: THIRD,
-              borderWidth: 1,
-              borderColor: THIRD,
-              borderRadius: 10,
-              padding: 20,
-            }}>
-            <TouchableOpacity
+        <View
+          style={{
+            height: 600,
+            margin: 30,
+            backgroundColor: '#ffffff',
+            borderEndColor: THIRD,
+            borderWidth: 1,
+            borderColor: THIRD,
+            borderRadius: 10,
+            padding: 20,
+          }}>
+          <ScrollView style={{flex: 1}}>
+            <CardOptions
               onPress={() => setModalVisible(false)}
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                height: 60,
-                backgroundColor: '#F9F9F9',
-                borderRadius: 8,
-                paddingHorizontal: 20,
-                marginBottom: 20,
-              }}>
-              <View style={{marginRight: 20}}>
+              svg={
                 <Svg
                   data-name={179457}
                   xmlns="http://www.w3.org/2000/svg"
@@ -132,26 +144,12 @@ function PaymentMethods({NavigateTo, navigation}) {
                     fill="#efc75e"
                   />
                 </Svg>
-              </View>
-              <View>
-                <Text style={{fontSize: 16, fontWeight: 'bold'}}>
-                  **** **** **** 4502
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+              }
+              text={'**** **** **** 4502'}
+            />
+            <CardOptions
               onPress={() => setModalVisible(false)}
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                height: 60,
-                backgroundColor: '#F9F9F9',
-                borderRadius: 8,
-                paddingHorizontal: 20,
-                marginBottom: 20,
-              }}>
-              <View style={{marginRight: 20}}>
+              svg={
                 <Svg
                   data-name={179457}
                   xmlns="http://www.w3.org/2000/svg"
@@ -173,26 +171,12 @@ function PaymentMethods({NavigateTo, navigation}) {
                     fill="#efc75e"
                   />
                 </Svg>
-              </View>
-              <View>
-                <Text style={{fontSize: 16, fontWeight: 'bold'}}>
-                  **** **** **** 4502
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+              }
+              text={'**** **** **** 4502'}
+            />
+            <CardOptions
               onPress={() => setModalVisible(false)}
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                height: 60,
-                backgroundColor: '#F9F9F9',
-                borderRadius: 8,
-                paddingHorizontal: 20,
-                marginBottom: 20,
-              }}>
-              <View style={{marginRight: 20}}>
+              svg={
                 <Svg
                   data-name={179457}
                   xmlns="http://www.w3.org/2000/svg"
@@ -214,26 +198,12 @@ function PaymentMethods({NavigateTo, navigation}) {
                     fill="#efc75e"
                   />
                 </Svg>
-              </View>
-              <View>
-                <Text style={{fontSize: 16, fontWeight: 'bold'}}>
-                  **** **** **** 4502
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+              }
+              text={'**** **** **** 4502'}
+            />
+            <CardOptions
               onPress={() => setModalVisible(false)}
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                height: 60,
-                backgroundColor: '#F9F9F9',
-                borderRadius: 8,
-                paddingHorizontal: 20,
-                marginBottom: 20,
-              }}>
-              <View style={{marginRight: 20}}>
+              svg={
                 <Svg
                   data-name={179457}
                   xmlns="http://www.w3.org/2000/svg"
@@ -255,26 +225,12 @@ function PaymentMethods({NavigateTo, navigation}) {
                     fill="#efc75e"
                   />
                 </Svg>
-              </View>
-              <View>
-                <Text style={{fontSize: 16, fontWeight: 'bold'}}>
-                  **** **** **** 4502
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+              }
+              text={'**** **** **** 4502'}
+            />
+            <CardOptions
               onPress={() => setModalVisible(false)}
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                height: 60,
-                backgroundColor: '#F9F9F9',
-                borderRadius: 8,
-                paddingHorizontal: 20,
-                marginBottom: 20,
-              }}>
-              <View style={{marginRight: 20}}>
+              svg={
                 <Svg
                   data-name={179457}
                   xmlns="http://www.w3.org/2000/svg"
@@ -296,26 +252,12 @@ function PaymentMethods({NavigateTo, navigation}) {
                     fill="#efc75e"
                   />
                 </Svg>
-              </View>
-              <View>
-                <Text style={{fontSize: 16, fontWeight: 'bold'}}>
-                  **** **** **** 4502
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
+              }
+              text={'**** **** **** 4502'}
+            />
+            <CardOptions
               onPress={() => setModalVisible(false)}
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                height: 60,
-                backgroundColor: '#F9F9F9',
-                borderRadius: 8,
-                paddingHorizontal: 20,
-                marginBottom: 20,
-              }}>
-              <View style={{marginRight: 20}}>
+              svg={
                 <Svg
                   data-name={179457}
                   xmlns="http://www.w3.org/2000/svg"
@@ -337,13 +279,38 @@ function PaymentMethods({NavigateTo, navigation}) {
                     fill="#efc75e"
                   />
                 </Svg>
-              </View>
-              <View>
-                <Text style={{fontSize: 16, fontWeight: 'bold'}}>
-                  **** **** **** 4502
-                </Text>
-              </View>
-            </TouchableOpacity>
+              }
+              text={'**** **** **** 4502'}
+            />
+            <CardOptions
+              onPress={() => setModalVisible(false)}
+              svg={
+                <Svg
+                  data-name={179457}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={68.077}
+                  height={21.304}
+                  viewBox="0 0 68.077 21.304">
+                  <G data-name="Group 886">
+                    <G data-name="Group 885">
+                      <Path
+                        data-name="Path 2249"
+                        d="M27.827 0L24.41 21.261h5.461L33.286 0zm16.472 8.661c-1.908-.942-3.078-1.578-3.078-2.542.023-.876.989-1.774 3.146-1.774a9.5 9.5 0 014.068.787l.5.221.742-4.448a13.784 13.784 0 00-4.9-.876c-5.393 0-9.19 2.8-9.214 6.814-.045 2.959 2.719 4.6 4.787 5.587 2.113 1.011 2.832 1.666 2.832 2.564-.023 1.379-1.708 2.015-3.28 2.015a11.106 11.106 0 01-5.125-1.1l-.719-.328-.764 4.623a17.054 17.054 0 006.091 1.1c5.731 0 9.461-2.761 9.507-7.035.013-2.345-1.444-4.14-4.593-5.608zM63.673.07h-4.225a2.706 2.706 0 00-2.855 1.711l-8.112 19.485h5.731l1.578-4.219h6.409l.819 4.236h5.055zM57.38 12.79c.111.011 2.2-6.886 2.2-6.886l1.664 6.886zM19.847 0l-5.348 14.445-.583-2.849a15.873 15.873 0 00-7.552-8.633l4.9 18.277h5.775L25.625.002h-5.778z"
+                        fill="#2394bc"
+                      />
+                    </G>
+                  </G>
+                  <Path
+                    data-name="Path 2250"
+                    d="M12.114 2.742A3.568 3.568 0 008.561.004H.087L0 .397c6.61 1.63 12.158 6.644 13.958 11.36z"
+                    fill="#efc75e"
+                  />
+                </Svg>
+              }
+              text={'**** **** **** 4502'}
+            />
+          </ScrollView>
+          <View style={{display: 'flex'}}>
             <Button
               veriant="primary"
               placeholder="Add Card"
@@ -352,7 +319,7 @@ function PaymentMethods({NavigateTo, navigation}) {
               }}
             />
           </View>
-        </ScrollView>
+        </View>
       </Modal>
     </>
   );
