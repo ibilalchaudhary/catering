@@ -20,7 +20,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
         }}>
         <TextInput
           placeholder={placeholder}
-          placeholderTextColor={TEXT_COLOR}
+          placeholderTextColor="#707070"
           secureTextEntry={secureTextEntry}
           style={{color: TEXT_COLOR}}
           onPressIn={() => {
@@ -53,7 +53,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
         }}>
         <TextInput
           placeholder={placeholder}
-          placeholderTextColor={TEXT_COLOR}
+          placeholderTextColor="#707070"
           secureTextEntry={secureTextEntry}
           style={{color: TEXT_COLOR}}
           onFocus={() => {
@@ -86,7 +86,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
         }}>
         <TextInput
           placeholder={placeholder}
-          placeholderTextColor={TEXT_COLOR}
+          placeholderTextColor="#707070"
           secureTextEntry={secureTextEntry}
           style={{color: TEXT_COLOR}}
           onFocus={() => {
@@ -130,7 +130,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
         <TextInput
           style={{width: '100%'}}
           placeholder={placeholder}
-          placeholderTextColor={TEXT_COLOR}
+          placeholderTextColor="#707070"
           secureTextEntry={secureTextEntry}
           style={{color: TEXT_COLOR}}
           onFocus={() => {
@@ -166,7 +166,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
         {svg}
         <TextInput
           placeholder={placeholder}
-          placeholderTextColor={TEXT_COLOR}
+          placeholderTextColor="#707070"
           secureTextEntry={secureTextEntry}
           style={{marginLeft: 20, flex: 1, color: TEXT_COLOR}}
           onFocus={() => {
@@ -210,7 +210,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
         <TextInput
           style={{width: '100%'}}
           placeholder={placeholder}
-          placeholderTextColor={TEXT_COLOR}
+          placeholderTextColor="#707070"
           secureTextEntry={secureTextEntry}
           onFocus={() => {
             setFocuse(true);

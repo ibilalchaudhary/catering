@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {Image, Text, TouchableOpacity, ScrollView} from 'react-native';
 import {PRIMARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
@@ -7,10 +7,12 @@ function SelectableMenuItem({
   name,
   catagory,
   img,
-  onPress,
+  // onPress,
   toPath,
   navigation,
 }) {
+  const [selected, setSelected] = useState(false);
+  const [badgeValue, setBadgeValue] = useState(0);
   return (
     <TouchableOpacity
       onPress={() => {
@@ -31,10 +33,33 @@ function SelectableMenuItem({
         },
         shadowOpacity: 0.27,
         shadowRadius: 4.65,
-        elevation: 3,
+        elevation: selected ? 0 : 3,
         display: 'flex',
         alignItems: 'center',
+        borderWidth: selected ? 1 : 0,
+        borderColor: PRIMARY,
+        position: 'relative',
       }}>
+      {selected ? (
+        <Text
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: -10,
+            paddingHorizontal: 10,
+            paddingVertical: 4,
+            borderColor: PRIMARY,
+            borderWidth: 1,
+            borderRadius: 20,
+            backgroundColor: PRIMARY,
+            color: WHITE,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          {badgeValue}
+        </Text>
+      ) : null}
       <Image source={img} style={{width: 65, height: 65, borderRadius: 65}} />
       <Text
         style={{
@@ -55,7 +80,12 @@ function SelectableMenuItem({
         }}>
         {catagory}
       </Text>
-      <TouchableOpacity style={{padding: 10}} onPress={onPress}>
+      <TouchableOpacity
+        style={{padding: 10}}
+        onPress={() => {
+          setSelected(true);
+          setBadgeValue(badgeValue + 1);
+        }}>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
           width={20.559}

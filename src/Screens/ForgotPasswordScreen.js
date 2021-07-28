@@ -31,7 +31,7 @@ export default class ForgotPasswordScreen extends Component {
             placeholder="Forgot Password"
             veriant="primary"
             onPress={() => {
-              NavigateTo('Dashboard', navigation);
+              NavigateTo('Login', navigation);
             }}
           />
           <View

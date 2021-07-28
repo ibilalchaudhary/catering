@@ -5,7 +5,13 @@ import {TEXT_COLOR} from '../Constants/Colors';
 export default function NewOrderRow({placeholder, svg, input}) {
   return (
     <View>
-      <Text style={{marginBottom: 10, fontSize: 14, color: TEXT_COLOR}}>
+      <Text
+        style={{
+          marginBottom: 3,
+          marginTop: 10,
+          fontSize: 14,
+          color: TEXT_COLOR,
+        }}>
         {placeholder}
       </Text>
       <View

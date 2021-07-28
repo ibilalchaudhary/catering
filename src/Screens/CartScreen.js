@@ -48,7 +48,7 @@ export default class CartScreen extends Component {
             <Button veriant="third" placeholder="Apply" onPress={() => {}} />
           </View>
           <Button
-            veriant="third"
+            veriant="primary"
             placeholder="Checkout"
             onPress={() => {
               NavigateTo('CheckOut', navigation);

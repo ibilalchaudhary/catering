@@ -16,9 +16,9 @@ export default function TimePickerBox() {
           flex: 1,
           height: 45,
           borderRadius: 5,
-          backgroundColor: THIRD,
+          // backgroundColor: '#f6f6f6',
           paddingHorizontal: 15,
-          borderWidth: 0,
+          borderWidth: 1,
           borderColor: PRIMARY,
           marginVertical: 8,
           display: 'flex',
@@ -40,7 +40,7 @@ export default function TimePickerBox() {
             fill="#ca4041"
           />
         </Svg>
-        <Text style={{fontSize: 14, color: WHITE}}>
+        <Text style={{fontSize: 14, color: PRIMARY}}>
           {date.toLocaleTimeString()}
         </Text>
       </TouchableOpacity>

@@ -22,16 +22,16 @@ export default class EditProfileScreen extends Component {
           backPath="Profile"
           navigation={navigation}
         />
+        <Text
+          style={{
+            marginTop: 20,
+            fontWeight: 'bold',
+            paddingHorizontal: 20,
+            marginVertical: 10,
+          }}>
+          Delivery Address
+        </Text>
         <ScrollView style={{flex: 1}}>
-          <Text
-            style={{
-              marginTop: 20,
-              fontWeight: 'bold',
-              paddingHorizontal: 20,
-              marginVertical: 10,
-            }}>
-            Delivery Address
-          </Text>
           <SavedAddresses navigation={navigation} />
           <SavedAddresses navigation={navigation} />
           <SavedAddresses navigation={navigation} />

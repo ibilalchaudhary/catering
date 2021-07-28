@@ -70,7 +70,13 @@ export default class NewOrderScreen extends Component {
               }
               input={<DatePickerBox mode="date" />}
             />
-            <Text style={{fontSize: 14, color: TEXT_COLOR, marginBottom: 10}}>
+            <Text
+              style={{
+                fontSize: 14,
+                color: TEXT_COLOR,
+                marginBottom: 3,
+                marginTop: 10,
+              }}>
               Time
             </Text>
             <View

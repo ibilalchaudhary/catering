@@ -592,7 +592,7 @@ export default class FeatureSelectScreen extends Component {
               ) : (
                 <Button
                   placeholder="Skip"
-                  veriant="skip"
+                  veriant="primary"
                   onPress={() => {
                     NavigateTo(toPath, navigation);
                   }}

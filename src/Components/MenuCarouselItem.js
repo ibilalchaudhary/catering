@@ -38,7 +38,7 @@ export default function MenuCarouselItem({
       <MenuItem variant="primary" />
       <MenuItem variant="primary" />
       <MenuItem variant="primary" />
-      <MenuItem variant="primary" lastItem={true} />
+      <MenuItem variant="primary" />
       <View
         style={{
           display: 'flex',
@@ -48,8 +48,12 @@ export default function MenuCarouselItem({
           marginBottom: button ? 30 : 0,
           marginTop: button ? 0 : 20,
         }}>
-        <Text style={{fontSize: 15, color: TEXT_COLOR}}>Price</Text>
-        <Text style={{fontSize: 15, color: FORTH}}>Rs 43,00,000</Text>
+        <Text style={{fontSize: 15, color: TEXT_COLOR, fontWeight: 'bold'}}>
+          Price
+        </Text>
+        <Text style={{fontSize: 15, color: FORTH, fontWeight: 'bold'}}>
+          Rs 43,00,000
+        </Text>
       </View>
       {button ? (
         <View

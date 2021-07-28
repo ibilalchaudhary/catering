@@ -24,7 +24,7 @@ export default class RegisterScreen extends Component {
       <ImageBackground
         source={require('../Assets/register_background.png')}
         style={{height: Height, flex: 1}}>
-        <ScrollView style={{flex: 1, paddingHorizontal: 20}}>
+        <ScrollView style={{height: Height, paddingHorizontal: 20}}>
           <Logo light={false} />
           <Heading varinat="primary" placeholder="Welcome Back!" />
           <InputBox placeholder="User Name" variant="light" />
@@ -49,10 +49,10 @@ export default class RegisterScreen extends Component {
             }}>
             <Checkbox placeholder="I agree with the processing of " />
             <TouchableOpacity
-            // onPress={() => {
-            //   NavigateTo('', navigation);
-            // }}
-            >
+              // onPress={() => {
+              //   NavigateTo('', navigation);
+              // }}
+              style={{marginLeft: 37}}>
               <Text style={styles.link}>personal data</Text>
             </TouchableOpacity>
             <Text
@@ -83,7 +83,7 @@ export default class RegisterScreen extends Component {
               flexDirection: 'row',
               justifyContent: 'center',
               alignItems: 'center',
-              marginVertical: 50,
+              marginTop: 40,
             }}>
             <Text style={{fontSize: 16, color: TEXT_COLOR, marginRight: 5}}>
               Don't have an account?

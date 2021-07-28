@@ -45,7 +45,15 @@ export default class LoginScreen extends Component {
                 onPress={() => {
                   NavigateTo('ForgotPassword', navigation);
                 }}>
-                <Text style={{fontSize: 16, color: TEXT_COLOR}}>
+                <Text
+                  style={{
+                    marginTop: 1,
+                    fontSize: 15,
+                    color: TEXT_COLOR,
+                    textDecorationColor: TEXT_COLOR,
+                    textDecorationStyle: 'solid',
+                    textDecorationLine: 'underline',
+                  }}>
                   Forgot Password?
                 </Text>
               </TouchableOpacity>
