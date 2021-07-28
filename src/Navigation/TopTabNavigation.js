@@ -57,7 +57,7 @@ function BookedOrder({navigation}) {
           />
         </View>
       </ScrollView>
-      <View style={{height: 60, marginHorizontal: 20}}>
+      <View style={{height: 60, marginHorizontal: 20, marginBottom: 20}}>
         <Button
           veriant="primary"
           placeholder="Place Order"

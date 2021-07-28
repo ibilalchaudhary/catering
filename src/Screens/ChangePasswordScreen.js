@@ -11,23 +11,23 @@ export default class CustomMenuScreen extends Component {
     const navigation = this.props.navigation;
     const {NavigateTo} = Navigate();
     return (
-      <ScrollView style={{flex: 1}}>
-        <View
-          style={{
-            display: 'flex',
-            backgroundColor: WHITE,
-            flex: 1,
-            justifyContent: 'space-between',
-            backgroundColor: WHITE,
-            height: Height,
-            width: Width,
-          }}>
-          <Header
-            light={false}
-            placeholder="Change Password"
-            backPath="Profile"
-            navigation={navigation}
-          />
+      <View
+        style={{
+          display: 'flex',
+          backgroundColor: WHITE,
+          flex: 1,
+          justifyContent: 'space-between',
+          backgroundColor: WHITE,
+          height: Height,
+          width: Width,
+        }}>
+        <Header
+          light={false}
+          placeholder="Change Password"
+          backPath="Profile"
+          navigation={navigation}
+        />
+        <ScrollView style={{flex: 1}}>
           <View style={{flex: 1, paddingHorizontal: 20}}>
             <InputBox
               variant="gray"
@@ -45,22 +45,22 @@ export default class CustomMenuScreen extends Component {
               secureTextEntry={true}
             />
           </View>
-          <View
-            style={{
-              height: 60,
-              marginBottom: 30,
-              paddingHorizontal: 20,
-            }}>
-            <Button
-              veriant="primary"
-              placeholder="Change Password"
-              onPress={() => {
-                NavigateTo('Dashboard', navigation);
-              }}
-            />
-          </View>
+        </ScrollView>
+        <View
+          style={{
+            height: 60,
+            marginBottom: 30,
+            paddingHorizontal: 20,
+          }}>
+          <Button
+            veriant="primary"
+            placeholder="Change Password"
+            onPress={() => {
+              NavigateTo('Dashboard', navigation);
+            }}
+          />
         </View>
-      </ScrollView>
+      </View>
     );
   }
 }

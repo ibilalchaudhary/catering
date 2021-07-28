@@ -22,6 +22,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
           placeholder={placeholder}
           placeholderTextColor={TEXT_COLOR}
           secureTextEntry={secureTextEntry}
+          style={{color: TEXT_COLOR}}
           onPressIn={() => {
             setFocuse(true);
           }}
@@ -54,6 +55,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
           placeholder={placeholder}
           placeholderTextColor={TEXT_COLOR}
           secureTextEntry={secureTextEntry}
+          style={{color: TEXT_COLOR}}
           onFocus={() => {
             setFocuse(true);
           }}
@@ -86,6 +88,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
           placeholder={placeholder}
           placeholderTextColor={TEXT_COLOR}
           secureTextEntry={secureTextEntry}
+          style={{color: TEXT_COLOR}}
           onFocus={() => {
             setFocuse(true);
           }}
@@ -129,6 +132,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
           placeholder={placeholder}
           placeholderTextColor={TEXT_COLOR}
           secureTextEntry={secureTextEntry}
+          style={{color: TEXT_COLOR}}
           onFocus={() => {
             setFocuse(true);
           }}
@@ -164,7 +168,7 @@ export default function InputBox({placeholder, variant, secureTextEntry, svg}) {
           placeholder={placeholder}
           placeholderTextColor={TEXT_COLOR}
           secureTextEntry={secureTextEntry}
-          style={{marginLeft: 20, flex: 1}}
+          style={{marginLeft: 20, flex: 1, color: TEXT_COLOR}}
           onFocus={() => {
             setFocuse(true);
           }}

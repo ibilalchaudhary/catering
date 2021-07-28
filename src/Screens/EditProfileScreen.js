@@ -13,23 +13,23 @@ export default class EditProfileScreen extends Component {
     const navigation = this.props.navigation;
     const {NavigateTo} = Navigate();
     return (
-      <ScrollView style={{flex: 1}}>
-        <View
-          style={{
-            display: 'flex',
-            backgroundColor: WHITE,
-            flex: 1,
-            justifyContent: 'space-between',
-            backgroundColor: WHITE,
-            height: Height,
-            width: Width,
-          }}>
-          <Header
-            light={false}
-            placeholder="Edit Profile"
-            backPath="Profile"
-            navigation={navigation}
-          />
+      <View
+        style={{
+          display: 'flex',
+          backgroundColor: WHITE,
+          flex: 1,
+          justifyContent: 'space-between',
+          backgroundColor: WHITE,
+          height: Height,
+          width: Width,
+        }}>
+        <Header
+          light={false}
+          placeholder="Edit Profile"
+          backPath="Profile"
+          navigation={navigation}
+        />
+        <ScrollView style={{flex: 1}}>
           <View style={{flex: 1, paddingHorizontal: 20}}>
             <InputBox
               variant="GrayWithSvg"
@@ -101,25 +101,25 @@ export default class EditProfileScreen extends Component {
               }
             />
           </View>
-          <View
-            style={{
-              height: 130,
-              display: 'flex',
-              justifyContent: 'space-between',
-              paddingHorizontal: 20,
-              marginBottom: 20,
-            }}>
-            <Button
-              veriant="secondary"
-              placeholder="Set Address on Map"
-              onPress={() => {
-                NavigateTo('MapView', navigation);
-              }}
-            />
-            <Button veriant="primary" placeholder="Save" />
-          </View>
+        </ScrollView>
+        <View
+          style={{
+            height: 130,
+            display: 'flex',
+            justifyContent: 'space-between',
+            paddingHorizontal: 20,
+            marginBottom: 20,
+          }}>
+          <Button
+            veriant="secondary"
+            placeholder="Set Address on Map"
+            onPress={() => {
+              NavigateTo('MapView', navigation);
+            }}
+          />
+          <Button veriant="primary" placeholder="Save" />
         </View>
-      </ScrollView>
+      </View>
     );
   }
 }
