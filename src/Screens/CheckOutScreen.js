@@ -708,7 +708,7 @@ export default class CheckOutScreen extends Component {
                   />
                 </Svg>
               </View>
-              <View>
+              <View style={{flex: 1}}>
                 <Text style={{fontSize: 16, fontWeight: 'bold'}}>
                   **** **** **** 4502
                 </Text>
