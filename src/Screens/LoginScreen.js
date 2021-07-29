@@ -62,7 +62,9 @@ export default class LoginScreen extends Component {
               placeholder="Login"
               veriant="primary"
               onPress={() => {
-                NavigateTo('Dashboard', navigation);
+                navigation.navigate('Dashboard', {
+                  ordered: true,
+                });
               }}
             />
             <View
@@ -97,7 +99,9 @@ export default class LoginScreen extends Component {
                 placeholder="Continue as Guest"
                 veriant="secondary"
                 onPress={() => {
-                  NavigateTo('Dashboard', navigation);
+                  navigation.navigate('Dashboard', {
+                    ordered: false,
+                  });
                 }}
               />
             </View>

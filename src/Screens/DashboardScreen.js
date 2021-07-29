@@ -13,7 +13,7 @@ import Svg, {G, Path} from 'react-native-svg';
 import TopTabNavigation from '../Navigation/TopTabNavigation';
 import Navigate from '../Navigation/Navigate';
 
-function HeaderDashboard({NavigateTo, navigation}) {
+function HeaderDashboard({NavigateTo, navigation, path}) {
   return (
     <View
       style={{
@@ -26,7 +26,7 @@ function HeaderDashboard({NavigateTo, navigation}) {
       }}>
       <TouchableOpacity
         onPress={() => {
-          NavigateTo('Profile', navigation);
+          NavigateTo(path, navigation);
         }}>
         <Image
           source={require('../Assets/userPic.png')}
@@ -49,6 +49,12 @@ export default class DashboardScreen extends Component {
       // please change this for showing which part of component
     };
   }
+  componentDidMount() {
+    const {ordered} = this.props.route.params;
+    this.setState({
+      isOrdered: ordered,
+    });
+  }
   render() {
     const navigation = this.props.navigation;
     const {NavigateTo} = Navigate();
@@ -56,14 +62,22 @@ export default class DashboardScreen extends Component {
       <>
         {this.state.isOrdered ? (
           <View style={{height: Height, flex: 1, backgroundColor: '#FFFFFF'}}>
-            <HeaderDashboard NavigateTo={NavigateTo} navigation={navigation} />
+            <HeaderDashboard
+              NavigateTo={NavigateTo}
+              navigation={navigation}
+              path={'Profile'}
+            />
             <TopTabNavigation />
           </View>
         ) : (
           <ImageBackground
             source={require('../Assets/dashboard_background.png')}
             style={{height: Height, flex: 1}}>
-            <HeaderDashboard NavigateTo={NavigateTo} navigation={navigation} />
+            <HeaderDashboard
+              NavigateTo={NavigateTo}
+              navigation={navigation}
+              path={'Register'}
+            />
             <View style={{marginVertical: 20, paddingHorizontal: 20}}>
               <Text style={{fontSize: 14, color: TEXT_COLOR}}>
                 Hi {USER_NAME}
