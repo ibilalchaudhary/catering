@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {TouchableOpacity, View, Text, ScrollView} from 'react-native';
-import {PRIMARY, WHITE} from '../Constants/Colors';
+import {View, ScrollView} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 import {Height, Width} from '../Constants/Constants';
 import Header from '../Components/Header';
 import InputBox from '../Components/InputBox';
